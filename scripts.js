@@ -25,6 +25,7 @@ function showCountriesList(resp) {
            .append($('<li>').text('Language: ' + item.languages))
            .append($('<li>').text('Currency: ' + item.currencies))
         });
+        
     } else {
         resp.forEach(function(item) {
    		$('<div id="country">').appendTo(countriesList)
@@ -37,13 +38,17 @@ function showCountriesList(resp) {
            .append($('<li>').text('Currency: ' + item.currencies))
            $('li').hide();
            $('h3').hide();
-        });
 
+        });
+        ("<h2>").addEventListener("click", hell())
     }
-    $("#show").click(function(){
-        $('h3').show();
-        $('li').show();
-    });
+    function hell(){
+            $("#show").click(function(){
+                $('h3').show();
+                $('li').show();
+            });
+    }
+
 };
 
       /*
